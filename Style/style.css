@@ -8,7 +8,7 @@ body {
 .navbar {
     width: 97vw;
     background-color: #ffff;
-    font-size: 16px; 
+    font-size: 1rem; 
     font-family: 'Raleway', sans-serif;
     
 }
@@ -149,9 +149,9 @@ body {
     border-color: #ddd; 
     color: black;
     display: flex;
-    border-radius: 35px;
-    width: 170px;
-    height: 40px;
+    border-radius: 2.1em;
+    width: 11rem;
+    height: 2.5rem;
     margin-top: 0.7em;
     margin-left: 2em;
 }
@@ -523,7 +523,10 @@ body {
 }
 
 
-
+@media all and (max-width: 1380px) {
+    
+}
+ 
 
 
 
