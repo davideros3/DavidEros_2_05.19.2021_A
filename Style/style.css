@@ -13,7 +13,7 @@ body {
     
 }
   
-    ul {
+ul {
       list-style: none;
       margin: 0;
       display: flex;
@@ -21,7 +21,7 @@ body {
       align-items: center;
       padding: 1em;
       padding-right: 2em;
-    }
+}
   
     li a {
       text-decoration: none;
@@ -63,10 +63,10 @@ body {
        
     }
     
-.bt-singup {
+    .bt-singup {
     color: #0065FC;
    
-}
+    }
 
 /*head */
 
@@ -560,11 +560,12 @@ body {
     }
 
     .art-popular-selection img {
-        width: 13em;
+        width: 8em;
     }
 
     .art-hotelAndPopular {
-        display: block;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .art-hotel-bn {
@@ -583,7 +584,19 @@ body {
     }
 
     .filter {
-        display: block;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .navbar {
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
     }
     
 }
