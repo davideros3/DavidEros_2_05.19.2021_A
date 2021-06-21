@@ -2,6 +2,12 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+:root {
+    --clr-black: #000;
+    --clr-blue: #0065fc;
+    --clr-grey: #ddd;
+}
+
 
 /*navbar*/
   
@@ -11,45 +17,26 @@ body {
     align-items: center;
     grid-template-columns: 1fr 11.3em 9em 4.5em;
   }
-  .nav-first {
+  .nav-first, .nav-second {
     text-decoration: none;
-    color: black;
-    font-size: 1em;
-    padding-left: 2.188em;
-    padding-right: 2.188em;
-  }
-  .nav-first:hover  {
-    border-top-style: solid;
-    border-width: 2px;
-    padding-top: 1.8em;
-    color: #0065fc;
-  }
-
-  .nav-third:hover  {
-    border-top-style: solid;
-    border-width: 2px;
-    padding-top: 1.8em;
-    color: #0065fc;
-}
-
-  .nav-second:hover  {
-        border-top-style: solid;
-        border-width: 2px;
-        padding-top: 1.8em;
-        color: #0065fc;
-    }
-  
-    .nav-second {
-    text-decoration: none;
-    color: black;
+    color: var(--clr-black);
     font-size: 1em;
     padding-left: 2.188em;
     padding-right: 2.188em;
   }
  
-  .nav-third {
+
+  .nav-first:hover, .nav-third:hover, .nav-second:hover  {
+    border-top-style: solid;
+    border-width: 2px;
+    padding-top: 1.8em;
+    color: var(--clr-blue);
+}
+
+
+ .nav-third {
     text-decoration: none;
-    color: #0065fc;
+    color: var(--clr-blue);
     font-size: 1em; 
 }
 
@@ -61,13 +48,13 @@ body {
 
 /* Header search-button*/
 
-.search{  
+.search {  
     display: flex;
     margin: 1em;
 }
 
 .search-bt {
-  color: black;
+  color: var(--clr-black);
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -75,7 +62,7 @@ body {
   background-color: #ffff;
   border-style: solid;
   border-width: 0.0625em;
-  border-color: #ddd; 
+  border-color: var(--clr-grey); 
   display: flex;
   width: 16.875em;
   height: 2.5em;
@@ -86,7 +73,7 @@ body {
 
 .search-submit {
     color: #ffff;
-    background-color: #0065FC; 
+    background-color: var(--clr-blue); 
     font-family: 'Raleway', sans-serif;
     border-radius: 0px 1em 1em 0px;
     border: none;
@@ -103,7 +90,7 @@ body {
 }
 
 .search-icon {
-    color: black;
+    color: var(--clr-black);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,11 +101,9 @@ body {
     border:none;
 }
 
-
-
 .search-submit:hover {
     background-color: #DEEBFF;
-    color: #0065FC;
+    color: var(--clr-blue);
 }
 
 /*Header filter butom*/
@@ -131,8 +116,8 @@ body {
     background-color: #ffff;
     border-style: solid;
     border-width: 1px;
-    border-color: #ddd; 
-    color: black;
+    border-color: var(--clr-grey);; 
+    color: var(--clr-black);
     display: flex;
     border-radius: 2.1em;
     width: 11rem;
@@ -151,7 +136,7 @@ body {
 }
 
 .filter-icon {
-    color: #0065FC;
+    color: var(--clr-blue);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,13 +170,13 @@ body {
     height: 1em;
     border-style: solid;
     border-width: 1px;
-    border-color: #ddd;
+    border-color: var(--clr-grey);;
     margin-top: 1.1em;
   
 }
 
 .info-circle b {
-    color: #0065FC ;
+    color: var(--clr-blue);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -210,7 +195,7 @@ body {
    
 }
 
-.art-hotel {
+.art-hotel, .art-popular {
     background-color: rgb(242, 242, 247);
     border-radius: 1em;
     height: auto;
@@ -243,7 +228,7 @@ body {
        
 }
 
-.art-hotel-selection:hover {
+.art-hotel-selection:hover, .art-popular-selection:hover ,.pic-banners-card:hover {
     transform:scale(1.002);
     box-shadow: 0px 2px 10px 4px #E4E7EC; 
 }
@@ -259,47 +244,27 @@ body {
     
     }
 
-
-.art-hotel-selection h3 {
+.art-hotel-selection h3, .art-hotel-selection p, .art-hotel-stars {
     justify-content: flex-start;
     display: flex;
     padding-left: 1em;
     
 }
-
-
-.art-hotel-selection p {
-    justify-content: flex-start;
-    display: flex;
-    padding-left: 1em;
-    padding-bottom: 0px;
-    
-}
-
 
 .art-hotel-stars  {
-    justify-content: flex-start;
-    display: flex;
-    padding-left: 1em;
     padding-bottom: 0.5em;
-     
 }
 
 .art-hotel-stars i {
-   color: #0065FC;
+   color: var(--clr-blue);
 }
 
 
 /*Article most popular */
 
 .art-popular {
-    background-color: rgb(242, 242, 247);
-    border-radius: 16px;
-    height: auto;
-    margin-top: 3em;
-    margin-left: 2em;
     margin-right: 1em;
-}
+} 
 
 .art-popular-header {
     display: flex;
@@ -321,10 +286,6 @@ body {
     display: flex;
 }
 
-.art-popular-selection:hover {
-    transform:scale(1.002);
-    box-shadow: 0px 2px 10px 4px #E4E7EC; 
-}
 
 .art-popular-selection img {
   
@@ -345,7 +306,7 @@ body {
 
 .art-popular-star  {
     display: flex;
-    color: #0065FC;
+    color: var(--clr-blue);
     padding-left: 2em;
 
 }
@@ -459,10 +420,7 @@ body {
     grid-row-end: 8;
 }
 
-.pic-banners-card:hover {
-    transform:scale(1.002);
-    box-shadow: 0px 2px 10px 4px #E4E7EC; 
-}
+
 
 
 /*Footer*/
@@ -479,7 +437,7 @@ body {
 
 .footer-details a {
     text-decoration: none;
-    color: #000;
+    color: var(--clr-black);
     display: block;
 
 }
@@ -578,7 +536,7 @@ body {
       .nav-first-mb:hover,.nav-second-mb:hover  {
         border-top: hidden;
         border-bottom-style: solid;
-        border-color: #0065fc;
+        border-color: var(--clr-blue);
         border-width: 3px;
         width: 100%;
         padding-top: 0.5em;
